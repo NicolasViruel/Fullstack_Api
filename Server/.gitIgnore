@@ -1,0 +1,9 @@
+# entorno viruel
+venv/
+# variables de entorno
+.env
+#todas las carpetas de python cache y compilados
+__pycache__/
+*.py[cod]
+#carpetas de testing
+.pytest_cache/

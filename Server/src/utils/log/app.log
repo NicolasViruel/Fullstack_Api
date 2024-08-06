@@ -1,0 +1,40 @@
+20240802 02:38:09 | INFO | Index/
+20240802 02:38:09 | ERROR | division by zero
+20240802 02:38:09 | ERROR | Traceback (most recent call last):
+  File "D:\Practica\Python\React+Python\Server\src\routes\IndexRoutes.py", line 34, in index
+    print(n/0)
+          ~^~
+ZeroDivisionError: division by zero
+
+20240802 02:39:19 | INFO | Index/
+20240802 02:39:19 | ERROR | division by zero
+20240802 02:39:19 | ERROR | Traceback (most recent call last):
+  File "D:\Practica\Python\React+Python\Server\src\routes\IndexRoutes.py", line 34, in index
+    print(n/0)
+          ~^~
+ZeroDivisionError: division by zero
+
+20240802 02:42:59 | INFO | Index/
+20240802 02:42:59 | ERROR | division by zero
+20240802 02:42:59 | ERROR | Traceback (most recent call last):
+  File "D:\Practica\Python\React+Python\Server\src\routes\IndexRoutes.py", line 34, in index
+    print(n/0)
+          ~^~
+ZeroDivisionError: division by zero
+
+20240802 14:49:34 | INFO | Index/
+20240802 14:49:34 | ERROR | division by zero
+20240802 14:49:34 | ERROR | Traceback (most recent call last):
+  File "D:\Practica\Python\React+Python\Server\src\routes\IndexRoutes.py", line 34, in index
+    print(n/0)
+          ~^~
+ZeroDivisionError: division by zero
+
+20240806 19:04:26 | INFO | Index/
+20240806 19:04:26 | ERROR | division by zero
+20240806 19:04:26 | ERROR | Traceback (most recent call last):
+  File "D:\Practica\Python\React+Python\Server\src\routes\IndexRoutes.py", line 34, in index
+    print(n/0)
+          ~^~
+ZeroDivisionError: division by zero
+

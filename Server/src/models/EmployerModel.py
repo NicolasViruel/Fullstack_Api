@@ -1,13 +1,13 @@
 class Employer():
 
-    def __init__(self, id, name, email) -> None:
+    def __init__(self, id, username, email) -> None:
         self.id = id
-        self.name = name
+        self.username = username
         self.email = email
 
     def to_json(self):
         return {
             'id': self.id,
-            'name': self.name,
+            'username': self.username,
             'email': self.email
         }    

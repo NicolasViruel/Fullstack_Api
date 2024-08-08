@@ -1,5 +1,11 @@
-import axios from 'axios';
+import axios from "./axios";
 
-const API = 'http://localhost:4000/api'
-
-export const registerRequest = user => axios.post(`${API}/register`, user);
+export const registerRequest = async (userData) => {
+  try {
+    const response = await axios.post("/auth/register", userData);
+    return response.data;
+  } catch (error) {
+    console.error("Error during registration:", error);
+    throw error;
+  }
+};

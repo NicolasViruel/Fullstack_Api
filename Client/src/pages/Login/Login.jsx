@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import { FaUserShield } from "react-icons/fa";
 import { AiOutlineSwapRight } from "react-icons/ai"
 import { BsFillShieldLockFill } from "react-icons/bs";
+import { MdMarkEmailRead } from "react-icons/md";
 
 //importo mis assets de Login
 import video from "../../assets/LoginAssets/video.mp4";
@@ -53,6 +54,16 @@ const Login = () => {
                 <input type="password" id="password" placeholder="Enter Password" />
               </div>
             </div>
+
+            <div className="inputDiv">
+              <label htmlFor="email">Email</label>
+              <div className="input flex">
+                <MdMarkEmailRead className="icon" />
+                <input type="email" id="email" placeholder="Enter Email" />
+              </div>
+            </div>
+            
+            
 
             <button type="submit" className="btn flex">
               <span>Login</span>

@@ -1,10 +1,9 @@
 import "./Register.css";
-import { Link } from "react-router-dom";
-
-//importo react-hook-form
+import "../../App.css";
+import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 
-//importo las request del backend
+//request desde el back
 import { registerRequest } from "../../api/auth";
 
 // importo icons
@@ -16,13 +15,30 @@ import { MdMarkEmailRead } from "react-icons/md";
 //importo mis assets de Login
 import video from "../../assets/LoginAssets/video.mp4";
 import logo from "../../assets/LoginAssets/logo.png";
+import { useState } from "react";
+
 
 const Register = () => {
   const { register, handleSubmit } = useForm();
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("");
+  const navigate = useNavigate();
+
+  const createUser = async (values) => {
+    // console.log("Creating user with values:", values);
+    try {
+      const res = await registerRequest(values);
+      // console.log("User Registered!", res);
+      navigate("/");
+    } catch (error) {
+      console.error("Failed to register user", error);
+    }
+  };
 
   return (
     <div className="registerPage flex">
-      <div className="container flex">
+      <div className="container flex ">
         <div className="videoDiv">
           <video src={video} autoPlay muted loop></video>
 
@@ -46,10 +62,7 @@ const Register = () => {
           </div>
           <form
             className="form grid"
-            onSubmit={handleSubmit(async (values) => {
-              const res = await registerRequest(values)
-              console.log(res);
-            })}
+            onSubmit={handleSubmit((values) => createUser(values))}
           >
             <div className="inputDiv">
               <label htmlFor="username">Username</label>
@@ -59,6 +72,9 @@ const Register = () => {
                   type="text"
                   placeholder="Enter Username"
                   {...register("username", { required: true })}
+                  onChange={(event) => {
+                    setUsername(event.target.value);
+                  }}
                 />
               </div>
             </div>
@@ -71,6 +87,9 @@ const Register = () => {
                   type="password"
                   placeholder="Enter Password"
                   {...register("password", { required: true })}
+                  onChange={(event) => {
+                    setPassword(event.target.value);
+                  }}
                 />
               </div>
             </div>
@@ -83,6 +102,9 @@ const Register = () => {
                   type="email"
                   placeholder="Enter Email"
                   {...register("email", { required: true })}
+                  onChange={(event) => {
+                    setEmail(event.target.value);
+                  }}
                 />
               </div>
             </div>

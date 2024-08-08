@@ -10,13 +10,16 @@ function App() {
 
 
   return (
-   <BrowserRouter>
+
+      <BrowserRouter>
     <Routes>
       <Route path='/' element={ <div><Login/></div>}/>
       <Route path='/register' element={ <div><Register/></div>}/>
       <Route path='/dashboard' element={ <div><Dashboard/></div>}/>
     </Routes>
    </BrowserRouter>
+
+   
   )
 }
 

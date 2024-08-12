@@ -14,7 +14,7 @@ const courses = [
         icon: <RiPlantFill />
     },
     {
-        title: 'Malnutrition',
+        title: 'Nutrition Plants',
         duration: '2 Hours',
         icon: <FaPlantWilt />
     }
@@ -23,15 +23,15 @@ const courses = [
 const Card = () => {
   return (
     <div className='card--container'>
-        {courses.map((item) =>(
-            <div className='card'>
-                <div className="card--cover">{item.icon}</div>
-                <div className="card--title">
-                    <h2>{item.title}</h2>
-                </div>
+    {courses.map((item, index) => (
+        <div className='card' key={index}>
+            <div className="card--cover">{item.icon}</div>
+            <div className="card--title">
+                <h2>{item.title}</h2>
             </div>
-        )) }
-    </div>
+        </div>
+    ))}
+</div>
   )
 }
 
